@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: gameverse-ai
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: FLASK_SECRET_KEY
+        generateValue: true
+      - key: GROQ_API_KEY
+        sync: false
