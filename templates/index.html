@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GameVerse AI - Your AI-powered gaming companion. Discover games across all genres, get personalized recommendations, and learn with interactive tutorials.">
+    <title>GameVerse AI – Your AI Gaming Companion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="nav-logo">
+            <span class="nav-logo-icon">🎮</span>
+            <span class="nav-logo-text">GAMEVERSE AI</span>
+        </a>
+        <ul class="nav-links" id="navMenu">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#chat">AI Chat</a></li>
+            <li><a href="#games">Games</a></li>
+            <li><a href="#tutorials">Tutorials</a></li>
+        </ul>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">⚡ Powered by AI</div>
+            <h1 class="hero-title">
+                Discover Your Next<br>
+                <span class="gradient-text">Favorite Game</span>
+            </h1>
+            <p class="hero-subtitle">
+                Your AI-powered gaming companion. Get personalized recommendations, explore genres, and level up with tutorials — all in one place.
+            </p>
+            <div class="hero-buttons">
+                <a href="#chat" class="btn btn-primary" id="heroCtaChat">💬 Chat with AI</a>
+                <a href="#games" class="btn btn-secondary" id="heroCtaGames">🎮 Browse Games</a>
+                <a href="#tutorials" class="btn btn-secondary" id="heroCtaTutorials">📚 Tutorials</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== AI CHAT SECTION ===== -->
+    <section class="section" id="chat">
+        <div class="section-header">
+            <h2 class="section-title">💬 <span class="gradient-text">AI Gaming Assistant</span></h2>
+            <p class="section-subtitle">Ask me anything about games — recommendations, tips, comparisons, or just chat about your favorites!</p>
+        </div>
+
+        <div class="chat-section">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-avatar">🤖</div>
+                    <div class="chat-header-text">
+                        <h3>GameVerse AI</h3>
+                        <p>● Online</p>
+                    </div>
+                </div>
+                <button class="chat-clear-btn" id="chatClearBtn">🗑️ Clear Chat</button>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will be injected here -->
+            </div>
+
+            <div class="chat-suggestions" id="chatSuggestions">
+                <button class="suggestion-chip">🎯 Best FPS games 2025</button>
+                <button class="suggestion-chip">🧙 RPG for beginners</button>
+                <button class="suggestion-chip">🆓 Free to play games</button>
+                <button class="suggestion-chip">🏆 Top rated this year</button>
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" class="chat-input" id="chatInput" placeholder="Ask about games, get recommendations..." autocomplete="off">
+                <button class="chat-send-btn" id="chatSendBtn" aria-label="Send message">➤</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GAMES SECTION ===== -->
+    <section class="section" id="games">
+        <div class="section-header">
+            <h2 class="section-title">🎮 <span class="gradient-text">Explore Games</span></h2>
+            <p class="section-subtitle">Browse by genre and find your next adventure. Every game links directly to its download page.</p>
+        </div>
+
+        <div class="genre-tabs" id="genreTabs">
+            <!-- Genre tabs will be injected here -->
+        </div>
+
+        <div class="games-grid" id="gamesGrid">
+            <!-- Game cards will be injected here -->
+        </div>
+    </section>
+
+    <!-- ===== TUTORIALS SECTION ===== -->
+    <section class="section" id="tutorials">
+        <div class="section-header">
+            <h2 class="section-title">📚 <span class="gradient-text">Gaming Tutorials</span></h2>
+            <p class="section-subtitle">Level up your skills with guides for beginners, advanced players, and genre-specific strategies.</p>
+        </div>
+
+        <div class="tutorial-filters" id="tutorialFilters">
+            <!-- Tutorial filters will be injected here -->
+        </div>
+
+        <div class="tutorials-grid" id="tutorialsGrid">
+            <!-- Tutorial cards will be injected here -->
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>🎮 GameVerse AI — Built with Flask & Groq AI &nbsp;|&nbsp; Game links redirect to official stores</p>
+    </footer>
+
+    <!-- ===== FAB CHAT BUTTON ===== -->
+    <button class="fab-chat" id="fabChat" aria-label="Open AI Chat">💬</button>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
